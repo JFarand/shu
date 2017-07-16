@@ -1,0 +1,14 @@
+{
+  "name": "jkntn",
+  "version": "1.0.0",
+  "description": "Theme For OWL's Asylum 2018",
+  "main": "index.html",
+  "scripts": {
+	      "env": "env",
+  "build-html": "cp index.html public/index.html",
+   "concat-js": "cat ./js/libs/ramda.js ./js/libs/handlebars.min-latest.js ./js/libs/p5.js ./js/libs/p5.dom.js ./js/libs/sketch.js >./public/js/script.min.js",
+	"ugly-js": "uglifyjs ./public/js/script.min.js --compress --mangle -o ./public/js/script.min.u.js"
+  },
+  "author": "J. OWL Farand",
+  "license": "ISC"
+}
