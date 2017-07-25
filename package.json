@@ -1,14 +1,20 @@
 {
-  "name": "jkntn",
+  "name": "ausir",
   "version": "1.0.0",
   "description": "Theme For OWL's Asylum 2018",
   "main": "index.html",
   "scripts": {
-	      "env": "env",
-  "build-html": "cp index.html public/index.html",
-   "concat-js": "cat ./js/libs/ramda.js ./js/libs/handlebars.min-latest.js ./js/libs/p5.js ./js/libs/p5.dom.js ./js/libs/sketch.js >./public/js/script.min.js",
-	"ugly-js": "uglifyjs ./public/js/script.min.js --compress --mangle -o ./public/js/script.min.u.js"
+    "env"        : "env",
+    "dev-css"    : "watch 'npm run css' styl",
+    "build-html" : "cp index.html public/index.html",
+    "build-css"  : "stylus -u nib styl/master.styl --out public/css",
+    "build-php"  : "cp index.php public/index.php && cp ./inc/* ./public/inc/",
+    "concat-js"  : "cat ./js/libs/ramda.js ./js/libs/handlebars.min-latest.js ./js/libs/p5.js ./js/libs/p5.dom.js ./js/libs/sketch.js >./public/js/script.min.js",
+    "ugly-js"    : "uglifyjs ./public/js/script.min.js --compress --mangle -o ./public/js/script.min.u.js"
   },
   "author": "J. OWL Farand",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "watch": "^1.0.2"
+  }
 }

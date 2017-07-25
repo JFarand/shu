@@ -1,0 +1,180 @@
+//Links(Thank You): type-scale.com, learn-the-web.algonquindesign.ca/topics/modular-typography
+
+@font-face
+	font-family: 'eur_b'
+	font-weight: 700
+	font-style: normal
+	font-stretch: expanded
+	unicode-range: U+0-10FFFF
+	src url(./../fonts/eurostile/EurostileLTPro-BoldEx2.ttf),
+		url(./../fonts/eurostile/EurostileLTPro-BoldEx2.woff)	
+
+@font-face
+	font-family: 'eur'
+	font-weight: 400
+	font-style: normal
+	font-stretch: expanded
+	unicode-range: U+0-10FFFF
+	src url(./../fonts/eurostile/EurostileLTPro.ttf),
+		url(./../fonts/eurostile/EurostileLTPro.woff)	
+
+
+@font-face {
+    font-family:'ath';
+	src:url('./../fonts/athelas/Athelas-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-FB06;
+}
+
+.font_euro
+	font-family: 'eur'
+	font-weight: 400
+	font-style: normal
+
+.font_euro_b
+	font-family: 'eur_b'
+	font-weight: 700
+	font-style: normal
+
+.font_ath
+	font-variant-ligatures: discretionary-ligatures
+	font-family: 'ath'
+	font-weight: 400
+	font-style: normal
+
+html 
+	font-size 1.125em
+
+body 
+	color $grey
+	font-family 'ath'
+	font-weight: 400
+	line-height: 1.45
+
+p
+	margin-bottom 1.3em
+
+//base: 18px scale: minor third: 1.200
+//HEADINGS
+
+h1, .h1, h2, .h2, h3, .h3, p, ul, ol, dl, dd, figure, blockquote, details, hr, fieldset, pre, table 
+	margin 0 0 1.5rem
+
+.tera
+	font-size: 3.583em
+	line-height: computeLineHeight(3.583)
+
+.giga
+	font-size: 2.98656em
+	line-height: computeLineHeight(2.98656)
+
+.mega
+	font-size: 2.4888em
+	line-height: computeLineHeight(2.4888)
+
+h1, .h1 
+	margin-top 0
+	font-size 2.074em
+	line-height: computeLineHeight(2.074)
+	
+
+h2, .h2
+	font-size 1.728em
+	line-height: computeLineHeight(1.728)
+
+h3, .h3
+	font-size 1.44em
+	line-height: computeLineHeight(1.44)
+
+h4, .h4
+	font-size 1.2em
+	line-height: computeLineHeight(1.2)
+
+h5, .h5
+	font-size: 1em
+	line-height: computeLineHeight(1)
+	
+
+h6, .h6
+	font-size: 0.8333em
+	line-height: computeLineHeight(0.8333)
+
+small, .font_small
+	font-size: 0.8333em;
+	line-height: computeLineHeight(0.8333)
+
+.milli
+	font-size: 0.6944em;
+	line-height: computeLineHeight(0.6944)
+
+.micro 
+	font-size: 0.5786em
+	line-height: computeLineHeight(0.5786)
+
+.nano
+	font-size: 0.4822em
+	line-height: computeLineHeight(0.4822)
+
+//PADDINGS && MARGINS
+
+//Normal, line-height size space
+.pull 
+	margin-top 1.5rem
+
+.pull-none
+	margin-top 0
+
+.push 
+	margin-bottom 1.5rem
+
+//No space
+.push-none
+	margin-bottom 0
+
+//Double normal space
+.push-double
+	margin-bottom 3rem
+
+//Half normal space
+.push-half
+	margin-bottom 0.75rem
+
+//Padding on the left and right
+.gutter
+	padding 0 1.5rem 0 1.5 rem 
+
+//Padding on all four sides
+.island
+	padding 1.5rem
+
+//Top and bottom padding
+.oreo
+	padding 1.5rem 0 1.5rem 0
+
+//MISC
+
+.capitalize 
+	text-transform: capitalize
+
+.uppercase
+	text-transform: uppercase
+
+.centext
+	text-align: center
+
+//Manual line heights
+.lineheight_one
+	line-height: 1
+
+//Limits for headers
+.header_brakes
+	max-height: 54px
+	overflow: hidden
+
+//Misc
+.levitate_87
+	top: -87px
+ .underline-none
+	text-decoration: none

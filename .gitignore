@@ -1,4 +1,9 @@
 #files
 .htaccess
+index.html
+index_adjust.html
 #folders
 playground/
+alula/
+inc/
+node_modules/
