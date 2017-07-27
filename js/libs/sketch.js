@@ -24,6 +24,10 @@ function setup(){
 		loadJSON(live+'read', (data) => {
 			loadReadTemplate(data);
 		});
+
+		loadJSON(live+'work', (data) => {
+			loadWorkTemplate(data);
+		});
 		
 	} else {
 		
@@ -59,7 +63,6 @@ function setup(){
 
 	function loadIntroTemplate(data){
 		var latestTemplateRaw = document.getElementById('latestTemplate').innerHTML;
-		console.log(latestTemplateRaw);
 		var latestTemplateCompiled = Handlebars.compile(latestTemplateRaw);
 		var voltronLatest = latestTemplateCompiled(data);
 		var latestContainer = select('#post_bank');
@@ -70,9 +73,16 @@ function setup(){
 		var readTemplateRaw = document.getElementById('booksreadTemplate').innerHTML;
 		var readTemplateCompiled = Handlebars.compile(readTemplateRaw);
 		var voltronRead = readTemplateCompiled(data);
-		console.log(`Voltron Read: ${voltronRead}`);
 		var readContainer = select('#books_read__themeat');
 		readContainer.html(voltronRead);
+	}
+
+	function loadWorkTemplate(data){
+		var workTemplateRaw = document.getElementById('workTemplate').innerHTML;
+		var workTemplateCompiled = Handlebars.compile(workTemplateRaw);
+		var voltronWork = workTemplateCompiled(data);
+		var workContainer = select('#work_themeat');
+		workContainer.html(voltronWork);
 	}
 	console.log('running');
 
